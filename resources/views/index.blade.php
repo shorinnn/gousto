@@ -5,25 +5,25 @@
 <h2 id="howtoinstall">How to install</h2>
 
 <p>Drop this folder in a web server's (running PHP7) public directory and browse to it.
-e.g.: If running wamp, browse to http://localhost/gousto ( or to http://localhost/gousto/public if modrewrite is not enabled)</p>
+e.g.: If running wamp, browse to http://localhost/gousto/public </p>
 
 <h3 id="apiendpoints">API endpoints</h3>
 
 <h4 id="fetchrecipebyid">Fetch recipe by id</h4>
 
-<p>GET http://localhost/gousto/api/recipes/ID</p>
+<p>GET http://localhost/gousto/public/api/recipes/ID</p>
 
-<p>eg http://localhost/gousto/api/recipes/1</p>
+<p>eg http://localhost/gousto/public/api/recipes/1</p>
 
 <h4 id="fetchrecipebycuisine">Fetch recipe by cuisine</h4>
 
-<p>GET http://localhost/gousto/api/recipes/findby/SEARCHFIELD/SEARCHVALUE/RESULTSPERPAGE</p>
+<p>GET http://localhost/gousto/public/api/recipes/findby/SEARCHFIELD/SEARCHVALUE/RESULTSPERPAGE</p>
 
-<p>eg http://localhost/gousto/api/recipes/findby/recipe_cuisine/british/2</p>
+<p>eg http://localhost/gousto/public/api/recipes/findby/recipe_cuisine/british/2</p>
 
 <h4 id="storerecipe">Store recipe</h4>
 
-<p>POST http://localhost/gousto/api/recipes/</p>
+<p>POST http://localhost/gousto/public/api/recipes/</p>
 
 <p>Payload example:
 [
@@ -53,17 +53,17 @@ e.g.: If running wamp, browse to http://localhost/gousto ( or to http://localhos
 
 <h4 id="updaterecipe">Update recipe</h4>
 
-<p>PUT http://localhost/gousto/api/recipes/ID</p>
+<p>PUT http://localhost/gousto/public/api/recipes/ID</p>
 
-<p>eg http://localhost/gousto/api/recipes/1</p>
+<p>eg http://localhost/gousto/public/api/recipes/1</p>
 
 <p>Payload example ['title'=>'Edited']</p>
 
 <h4 id="raterecipe">Rate recipe</h4>
 
-<p>POST http://localhost/gousto/api/recipes/ID/rate</p>
+<p>POST http://localhost/gousto/public/api/recipes/ID/rate</p>
 
-<p>eg http://localhost/gousto/api/recipes/1/rate</p>
+<p>eg http://localhost/gousto/public/api/recipes/1/rate</p>
 
 <p>Payload example ['rating'=>3]</p>
 
