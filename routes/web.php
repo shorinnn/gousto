@@ -14,13 +14,13 @@
 $router->group(['middleware' => 'Throttle:100,1'], function() use($router){
 
   $router->get('/', function () use ($router) {
-      return $router->app->version();
+      return view('index');
   });
 
   $router->group(['prefix'=>'api/recipes'], function() use($router){
 
     $router->get('/', function(){
-      return 'Read me here';
+      return view('endpoints');
     });
     // Fetch a recipe by ID
     $router->get('/{id}', 'RecipesController@show');
