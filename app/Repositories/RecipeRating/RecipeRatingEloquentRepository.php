@@ -30,15 +30,14 @@ class RecipeRatingEloquentRepository extends EloquentRepository implements Recip
         ];
     }
 
-    public function validateRecipeAndCreate($id, $attributes){
+    public function create(array $attributes){
         $recipeInterface  = new Recipe;
-        $recipe = $recipeInterface->find($id);
+        $recipe = $recipeInterface->find($attributes['recipe_id']);
 
         if( !$recipe ){
           return response()->json(['recipe_id' => ['Recipe does not exist']], 422, ['X-Header-One' => 'Header Value']);
         }
 
-        $attributes['recipe_id'] = $id;
         return parent::create($attributes);
     }
 

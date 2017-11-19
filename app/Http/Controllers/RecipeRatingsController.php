@@ -12,9 +12,10 @@ class RecipeRatingsController extends Controller
 
     public function store(int $id, Request $request){
       $this->validate($request, $this->recipeRating->validationRules() );
+      $attributes = $request->all();
+      $attributes['recipe_id'] = $id;
 
-
-      return $this->recipeRating->validateRecipeAndcreate($id, $request->all());
+      return $this->recipeRating->create( $attributes );
     }
 
 

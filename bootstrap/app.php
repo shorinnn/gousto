@@ -67,6 +67,10 @@ $app->singleton(
 //     'auth' => App\Http\Middleware\Authenticate::class,
 // ]);
 
+$app->routeMiddleware([
+'Throttle' => 'GrahamCampbell\Throttle\Http\Middleware\ThrottleMiddleware',
+]);
+
 /*
 |--------------------------------------------------------------------------
 | Register Service Providers
@@ -79,6 +83,7 @@ $app->singleton(
 */
 
   $app->register(App\Providers\AppServiceProvider::class);
+  $app->register(GrahamCampbell\Throttle\ThrottleServiceProvider::class);
 // $app->register(App\Providers\AuthServiceProvider::class);
 // $app->register(App\Providers\EventServiceProvider::class);
 
