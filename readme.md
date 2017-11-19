@@ -3,7 +3,7 @@ API Test
 
 ##How to install
 Drop this folder in a web server's (running PHP7) public directory and browse to it.
-e.g.: If running wamp, browse to http://localhost/gousto
+e.g.: If running wamp, browse to http://localhost/gousto ( or to http://localhost/gousto/public if modrewrite is not enabled)
 
 ###API endpoints
 ####Fetch recipe by id
@@ -78,3 +78,5 @@ The Postman Chrome extension can be used to fire requests at the API: https://ch
 SQLite database is being used. DB Can be refreshed by running `php artisan migrate:refresh --seed`
 
 Test environment uses in memory DB.
+
+Request throttled at 100 per minute

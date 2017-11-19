@@ -5,7 +5,7 @@
 <h2 id="howtoinstall">How to install</h2>
 
 <p>Drop this folder in a web server's (running PHP7) public directory and browse to it.
-e.g.: If running wamp, browse to http://localhost/gousto</p>
+e.g.: If running wamp, browse to http://localhost/gousto ( or to http://localhost/gousto/public if modrewrite is not enabled)</p>
 
 <h3 id="apiendpoints">API endpoints</h3>
 
@@ -86,3 +86,5 @@ e.g.: If running wamp, browse to http://localhost/gousto</p>
 <p>SQLite database is being used. DB Can be refreshed by running <code>php artisan migrate:refresh --seed</code></p>
 
 <p>Test environment uses in memory DB.</p>
+
+<p>Request throttled at 100 per minute</p>
