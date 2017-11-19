@@ -79,4 +79,4 @@ SQLite database is being used. DB Can be refreshed by running `php artisan migra
 
 Test environment uses in memory DB.
 
-Request throttled at 100 per minute
+Request throttled at 100 per minute.
