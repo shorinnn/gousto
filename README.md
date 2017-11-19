@@ -3,21 +3,21 @@ API Test
 
 ##How to install
 Drop this folder in a web server's (running PHP7) public directory and browse to it.
-e.g.: If running wamp, browse to http://localhost/gousto ( or to http://localhost/gousto/public if modrewrite is not enabled)
+e.g.: If running wamp, browse to http://localhost/gousto/public
 
 ###API endpoints
 ####Fetch recipe by id
-GET http://localhost/gousto/api/recipes/ID
+GET http://localhost/gousto/public/api/recipes/ID
 
-eg http://localhost/gousto/api/recipes/1
+eg http://localhost/gousto/public/api/recipes/1
 
 ####Fetch recipe by cuisine
-GET http://localhost/gousto/api/recipes/findby/SEARCHFIELD/SEARCHVALUE/RESULTSPERPAGE
+GET http://localhost/gousto/public/api/recipes/findby/SEARCHFIELD/SEARCHVALUE/RESULTSPERPAGE
 
-eg http://localhost/gousto/api/recipes/findby/recipe_cuisine/british/2
+eg http://localhost/gousto/public/api/recipes/findby/recipe_cuisine/british/2
 
 ####Store recipe
-POST http://localhost/gousto/api/recipes/
+POST http://localhost/gousto/public/api/recipes/
 
 Payload example:
 [
@@ -46,17 +46,17 @@ Payload example:
     ];
 
 ####Update recipe
-PUT http://localhost/gousto/api/recipes/ID
+PUT http://localhost/gousto/public/api/recipes/ID
 
-eg http://localhost/gousto/api/recipes/1
+eg http://localhost/gousto/public/api/recipes/1
 
 Payload example ['title'=>'Edited']
 
 
 ####Rate recipe
-POST http://localhost/gousto/api/recipes/ID/rate
+POST http://localhost/gousto/public/api/recipes/ID/rate
 
-eg http://localhost/gousto/api/recipes/1/rate
+eg http://localhost/gousto/public/api/recipes/1/rate
 
 Payload example ['rating'=>3]
 
